@@ -13,18 +13,18 @@ angular.module("app", ["ngResource"])
       user.$save(function(){
         $scope.createForm = {};
         $scope.users = User.query();
-      })
-    }
+      });
+    };
 
     $scope.remove = function(user) {
       user.$remove(function() {
         $scope.users = User.query();
-      })
-    }
+      });
+    };
 
     $scope.update = function(user) {
       user.$update(function() {
         $scope.users = User.query();
-      })
-    }
+      });
+    };
 }]);
